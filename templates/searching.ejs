@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Searching Friends</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Search Your Friends</h1>
+    <br>
+    <form action="/searching" method = "get">
+    Photo: <img src="<%- photo %>" alt="User Image">
+    <br>
+    Name: <%- name %>
+    <br>
+    Major: <%- major %>
+    <br>
+    Years: <%- years %>
+    <br>
+    Age: <%- age %>
+    <br>
+    Profile: <%- profile %>
+    <br>
+    <input type="button" value="Like" name="Like" id="Like">
+    <input type="submit" value="Next" name="Next"  id="Next">
+    </form>
+    <br>
+<a href="/menu">Menu</a>
+</body>
+</html>
+
+
+ <script>
+  
+    document.querySelector("#Like").onclick = ()=>{
+        document.querySelector("form").action = "/like";
+        document.querySelector("form").submit();
+    }
+</script>

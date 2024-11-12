@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+html{
+    font-family: Lustria;
+    background-color: bisque;
+    background-repeat: no-repeat;
+    background-position: left top;
+    margin: 10px 10px 10px 10px;
+    display:block;
+}
+#logo{
+    content: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhMvzOf24iBBYOSMgUZFTkLn0r-N0sJa30nw&usqp=CAU");
+    width : 150px;
+    height: 150px;
+}
+#logo h2{
+    text-align: center;
+}
+#movies{
+    margin:auto;
+    width:50%;
+    text-align: center;
+}
+#outerborder{
+    box-sizing: border-box;
+    border-color:red;
+    border-width: 10px;
+    border-style: double;
+    margin: 10px 10px 10px 10px;
+}
+h2 {
+    color: navy;
+    text-align: center;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input[type="text"], input[type="email"], select, textarea {
+    padding: 5px;
+    margin-top: 5px;
+}
+.submit-reset-buttons {
+    margin-top: 20px;
+}
+#options{
+    text-align: center;
+    margin-top: 50px;
+    margin-left:10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-style: groove;
+    border-radius: 5px;
+    border-color:red;
+}
+ul{
+    list-style: none;
+}
+button{
+    width: 150px;
+    height: 50px;
+}

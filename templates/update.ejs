@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>UMD date</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <form action="/update" method="post">
+        <fieldset>
+            <label><strong>Name: </strong><input type="text" id = "name" value="<%- name %>" name="name"></label>
+            <label><strong>Age: </strong><input type="text" id="age" value="<%- age %>" name="age"></label>
+            <br>
+            <label><strong>DirectoryID: </strong><%-directoryid %></label>
+            <label><strong>Email: </strong><input type="text" id="email" value="<%- email %>" name="email"></label>
+            <br>
+            <label><strong>Major:</strong> <input type="text" id="major" value="<%- major %>" name="major"></label>
+            <label><strong>Years: </strong><select id="years" value="<%- years %>" name = "years" >
+                <option value="Freshman" selected>Freshman</option>
+                <option value="Sophomore">Sophomore</option>
+                <option value="Junior">Junior</option>
+                <option value="Senior">Senior</option>
+              </select></label>
+            <label><strong>Photo: <input type="text" id="photo" value="<%-photo %>" name="photo" placeholder="URL">
+            </strong><input type="button" value="Upload" id="photoup" name="photoup">
+            <br>
+            <img id="photobox" src="<%- photo %>" width="444" height="293" alt="No image">
+            </label>
+            <br>
+            <br>
+           <label><strong>Profile:</strong>
+            <br>
+            <textarea rows="5"  cols="80" name="profile"><%- profile %></textarea></label>
+            <input type="submit" value="update">
+            <input type="reset" value="Clear">
+        </fieldset>
+    </form>
+    <hr>
+    <a href="/">Home</a>
+</body>
+</html>
+
+<script>
+    document.querySelector("#photoup").onclick=()=>{
+        let url=document.querySelector("#photo").value;
+        document.querySelector("#photobox").src = url;
+    };
+</script>

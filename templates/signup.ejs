@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>UMD date</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <form action="/signup" method="post">
+        <fieldset>
+            <label><strong>Name: </strong><input type="text" id = "name" name="name"></label>
+            <label><strong>Age: </strong><input type="text" id="age" name="age"></label>
+            <br>
+            <label><strong>DirectoryID: </strong><input type="text" id="dircetoryid" name="directoryid"></label>
+            <label><strong>Email: </strong><input type="text" id="email" name="email"></label>
+            <br>
+            <label><strong>Major:</strong> <input type="text" id="major" name="major"></label>
+            <label><strong>Years: </strong><select id="years" name = "years" >
+                <option value="Freshman" selected>Freshman</option>
+                <option value="Sophomore">Sophomore</option>
+                <option value="Junior">Junior</option>
+                <option value="Senior">Senior</option>
+              </select></label>
+            <label><strong>Photo: <input type="text" id="photo" name="photo" placeholder="URL">
+            </strong><input type="button" value="Upload" id="photoup" name="photoup">
+            <br>
+            <img id="photobox" src="InitialImage.jpg" width="444" height="293" alt="No image">
+            </label>
+            <br>
+            <br>
+           <label><strong>Profile:</strong>
+            <br>
+            <textarea rows="5" cols="80" name="profile"></textarea></label>
+            <input type="submit" value="Sign up">
+            <input type="reset" value="Clear">
+        </fieldset>
+    </form>
+    <hr>
+    <a href="/">Home</a>
+</body>
+</html>
+
+<script>
+    document.querySelector("#photoup").onclick=()=>{
+        let url=document.querySelector("#photo").value;
+        document.querySelector("#photobox").src = url;
+    };
+</script>
